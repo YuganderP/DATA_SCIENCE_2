@@ -1,0 +1,271 @@
+ .gitignore                                         |    1 [32m+[m
+ AgenticAI/Python OOPS/.idea/.gitignore             |    5 [32m+[m
+ AgenticAI/Python OOPS/.idea/Python OOPS.iml        |   10 [32m+[m
+ .../.idea/inspectionProfiles/profiles_settings.xml |    6 [32m+[m
+ AgenticAI/Python OOPS/.idea/misc.xml               |    8 [32m+[m
+ AgenticAI/Python OOPS/.idea/modules.xml            |    8 [32m+[m
+ AgenticAI/Python OOPS/.idea/vcs.xml                |    6 [32m+[m
+ AgenticAI/Python OOPS/main.py                      |   16 [32m+[m
+ AgenticAI/Python OOPS/oops_1.py                    |   39 [32m+[m
+ AgenticAI/Python OOPS/opps_2.py                    |   66 [32m+[m
+ DSA/.vscode/tasks.json                             |   28 [32m+[m
+ DSA/001_intro/01_cpp_intro.cpp                     |   11 [32m+[m
+ DSA/001_intro/01_cpp_intro.exe                     |  Bin [31m0[m -> [32m48873[m bytes
+ DSA/002_patterns/01_rectangle.cpp                  |   15 [32m+[m
+ DSA/002_patterns/02_triangle.cpp                   |   15 [32m+[m
+ DSA/002_patterns/02_triangle.exe                   |  Bin [31m0[m -> [32m47002[m bytes
+ DSA/002_patterns/03_numberTriangle.cpp             |   15 [32m+[m
+ DSA/002_patterns/03_numberTriangle.exe             |  Bin [31m0[m -> [32m46932[m bytes
+ DSA/002_patterns/04_eq_triangle.cpp                |   19 [32m+[m
+ DSA/002_patterns/04_eq_triangle.exe                |  Bin [31m0[m -> [32m47055[m bytes
+ DSA/002_patterns/05_misc.cpp                       |   24 [32m+[m
+ DSA/002_patterns/05_misc.exe                       |  Bin [31m0[m -> [32m47280[m bytes
+ DSA/002_patterns/rectangle.exe                     |  Bin [31m0[m -> [32m47002[m bytes
+ FAST_API/FASTAPI/fastapi_blog/snippets.py          |   16 [32m+[m
+ .../fast_api_practice_1}/.python-version           |    0
+ .../fast_api_practice_1}/README.md                 |    0
+ .../__pycache__/main.cpython-312.pyc               |  Bin [31m0[m -> [32m770[m bytes
+ .../__pycache__/snippets.cpython-312.pyc           |  Bin [31m0[m -> [32m656[m bytes
+ .../FAST_API_PRACTICE/fast_api_practice_1/main.py  |   15 [32m+[m
+ .../fast_api_practice_1/pyproject.toml             |    7 [32m+[m
+ .../fast_api_practice_1/snippets.py                |   16 [32m+[m
+ .../fast_api_practice_2/.python-version            |    1 [32m+[m
+ .../fast_api_practice_2/README.md}                 |    0
+ .../__pycache__/main.cpython-312.pyc               |  Bin [31m0[m -> [32m1138[m bytes
+ .../__pycache__/snippets.cpython-312.pyc           |  Bin [31m0[m -> [32m656[m bytes
+ .../FAST_API_PRACTICE/fast_api_practice_2/main.py  |   20 [32m+[m
+ .../fast_api_practice_2/pyproject.toml             |    7 [32m+[m
+ .../fast_api_practice_2/snippets.py                |   16 [32m+[m
+ .../fast_api_practice_2/static/css/main.css        |  295 [32m++[m
+ .../fast_api_practice_2/static/icons/favicon.ico   |  Bin [31m0[m -> [32m7406[m bytes
+ .../fast_api_practice_2/static/icons/icon-192.png  |  Bin [31m0[m -> [32m10344[m bytes
+ .../fast_api_practice_2/static/icons/icon-512.png  |  Bin [31m0[m -> [32m30036[m bytes
+ .../fast_api_practice_2/static/icons/icon.png      |  Bin [31m0[m -> [32m9848[m bytes
+ .../fast_api_practice_2/static/icons/icon.svg      |    7 [32m+[m
+ .../fast_api_practice_2/static/icons/original.png  |  Bin [31m0[m -> [32m32523[m bytes
+ .../fast_api_practice_2/static/js/utils.js}        |    0
+ .../static/profile_pics/default.jpg                |  Bin [31m0[m -> [32m10994[m bytes
+ .../fast_api_practice_2/static/site.webmanifest    |   35 [32m+[m
+ .../fast_api_practice_2/templates/home.html        |   24 [32m+[m
+ .../fast_api_practice_2/templates/layout.html      |  246 [32m++[m
+ .../fast_api_practice_3/.python-version            |    1 [32m+[m
+ .../fast_api_practice_3/README.md                  |    0
+ .../__pycache__/main.cpython-312.pyc               |  Bin [31m0[m -> [32m4246[m bytes
+ .../__pycache__/snippets.cpython-312.pyc           |  Bin [31m0[m -> [32m656[m bytes
+ .../FAST_API_PRACTICE/fast_api_practice_3/main.py  |   92 [32m+[m
+ .../fast_api_practice_3/pyproject.toml             |    7 [32m+[m
+ .../fast_api_practice_3/snippets.py                |   16 [32m+[m
+ .../fast_api_practice_3/static/css/main.css        |  295 [32m++[m
+ .../fast_api_practice_3/static/icons/favicon.ico   |  Bin [31m0[m -> [32m7406[m bytes
+ .../fast_api_practice_3/static/icons/icon-192.png  |  Bin [31m0[m -> [32m10344[m bytes
+ .../fast_api_practice_3/static/icons/icon-512.png  |  Bin [31m0[m -> [32m30036[m bytes
+ .../fast_api_practice_3/static/icons/icon.png      |  Bin [31m0[m -> [32m9848[m bytes
+ .../fast_api_practice_3/static/icons/icon.svg      |    7 [32m+[m
+ .../fast_api_practice_3/static/icons/original.png  |  Bin [31m0[m -> [32m32523[m bytes
+ .../fast_api_practice_3/static/js/utils.js         |    0
+ .../static/profile_pics/default.jpg                |  Bin [31m0[m -> [32m10994[m bytes
+ .../fast_api_practice_3/static/site.webmanifest    |   35 [32m+[m
+ .../fast_api_practice_3/templates/error.html       |    9 [32m+[m
+ .../fast_api_practice_3/templates/home.html        |   26 [32m+[m
+ .../fast_api_practice_3/templates/layout.html      |  246 [32m++[m
+ .../fast_api_practice_3/templates/post.html        |   76 [32m+[m
+ FAST_API/FastAPI-02-Templates-main.zip             |  Bin [31m0[m -> [32m160997[m bytes
+ FAST_API/FastAPI-02-Templates-main/.gitignore      |  237 [32m++[m
+ FAST_API/FastAPI-02-Templates-main/.python-version |    1 [32m+[m
+ FAST_API/FastAPI-02-Templates-main/README.md       |    0
+ .../FastAPI-02-Templates-main/home_finished.html   |   25 [32m+[m
+ .../FastAPI-02-Templates-main/layout_finished.html |  175 [32m+[m
+ FAST_API/FastAPI-02-Templates-main/main.py         |   41 [32m+[m
+ FAST_API/FastAPI-02-Templates-main/pyproject.toml  |    9 [32m+[m
+ FAST_API/FastAPI-02-Templates-main/snippets.txt    |   11 [32m+[m
+ .../FastAPI-02-Templates-main/static/css/main.css  |  295 [32m++[m
+ .../static/icons/favicon.ico                       |  Bin [31m0[m -> [32m7406[m bytes
+ .../static/icons/icon-192.png                      |  Bin [31m0[m -> [32m10344[m bytes
+ .../static/icons/icon-512.png                      |  Bin [31m0[m -> [32m30036[m bytes
+ .../static/icons/icon.png                          |  Bin [31m0[m -> [32m9848[m bytes
+ .../static/icons/icon.svg                          |    7 [32m+[m
+ .../static/icons/original.png                      |  Bin [31m0[m -> [32m32523[m bytes
+ .../FastAPI-02-Templates-main/static/js/utils.js   |    0
+ .../static/profile_pics/default.jpg                |  Bin [31m0[m -> [32m10994[m bytes
+ .../static/site.webmanifest                        |   35 [32m+[m
+ .../FastAPI-02-Templates-main/templates/home.html  |   25 [32m+[m
+ .../templates/layout.html                          |  186 [32m+[m
+ FAST_API/FastAPI-02-Templates-main/uv.lock         |  939 [32m+++++[m
+ FAST_API/Fastapi_blog/.python-version              |    1 [32m+[m
+ FAST_API/Fastapi_blog/README.md                    |    0
+ .../Fastapi_blog/__pycache__/main.cpython-312.pyc  |  Bin [31m0[m -> [32m985[m bytes
+ .../__pycache__/snippets.cpython-312.pyc           |  Bin [31m0[m -> [32m631[m bytes
+ FAST_API/Fastapi_blog/main.py                      |   15 [32m+[m
+ FAST_API/{fast_api => Fastapi_blog}/pyproject.toml |    2 [32m+[m[31m-[m
+ FAST_API/Fastapi_blog/snippets.py                  |   16 [32m+[m
+ FAST_API/Fastapi_blog_2/.python-version            |    1 [32m+[m
+ FAST_API/Fastapi_blog_2/README.md                  |    0
+ .../__pycache__/main.cpython-312.pyc               |  Bin [31m0[m -> [32m1502[m bytes
+ .../__pycache__/snippets.cpython-312.pyc           |  Bin [31m0[m -> [32m633[m bytes
+ FAST_API/Fastapi_blog_2/main.py                    |   23 [32m+[m
+ FAST_API/Fastapi_blog_2/pyproject.toml             |    7 [32m+[m
+ FAST_API/Fastapi_blog_2/snippets.py                |   16 [32m+[m
+ FAST_API/Fastapi_blog_2/static/css/main.css        |  295 [32m++[m
+ FAST_API/Fastapi_blog_2/static/icons/favicon.ico   |  Bin [31m0[m -> [32m7406[m bytes
+ FAST_API/Fastapi_blog_2/static/icons/icon-192.png  |  Bin [31m0[m -> [32m10344[m bytes
+ FAST_API/Fastapi_blog_2/static/icons/icon-512.png  |  Bin [31m0[m -> [32m30036[m bytes
+ FAST_API/Fastapi_blog_2/static/icons/icon.png      |  Bin [31m0[m -> [32m9848[m bytes
+ FAST_API/Fastapi_blog_2/static/icons/icon.svg      |    7 [32m+[m
+ FAST_API/Fastapi_blog_2/static/icons/original.png  |  Bin [31m0[m -> [32m32523[m bytes
+ FAST_API/Fastapi_blog_2/static/js/utils.js         |    0
+ .../Fastapi_blog_2/static/profile_pics/default.jpg |  Bin [31m0[m -> [32m10994[m bytes
+ FAST_API/Fastapi_blog_2/static/site.webmanifest    |   35 [32m+[m
+ FAST_API/Fastapi_blog_2/templates/home.html        |   25 [32m+[m
+ FAST_API/Fastapi_blog_2/templates/layout.html      |  175 [32m+[m
+ FAST_API/Fastapi_blog_2_copy/.python-version       |    1 [32m+[m
+ FAST_API/Fastapi_blog_2_copy/README.md             |    0
+ .../__pycache__/database.cpython-312.pyc           |  Bin [31m0[m -> [32m936[m bytes
+ .../__pycache__/main.cpython-312.pyc               |  Bin [31m0[m -> [32m15226[m bytes
+ .../__pycache__/models.cpython-312.pyc             |  Bin [31m0[m -> [32m2532[m bytes
+ .../__pycache__/schemas.cpython-312.pyc            |  Bin [31m0[m -> [32m2303[m bytes
+ .../__pycache__/snippets.cpython-312.pyc           |  Bin [31m0[m -> [32m633[m bytes
+ FAST_API/Fastapi_blog_2_copy/blog.db               |  Bin [31m0[m -> [32m40960[m bytes
+ FAST_API/Fastapi_blog_2_copy/database.py           |   20 [32m+[m
+ FAST_API/Fastapi_blog_2_copy/main.py               |  273 [32m++[m
+ FAST_API/Fastapi_blog_2_copy/models.py             |   48 [32m+[m
+ FAST_API/Fastapi_blog_2_copy/pyproject.toml        |    7 [32m+[m
+ FAST_API/Fastapi_blog_2_copy/schemas.py            |   43 [32m+[m
+ FAST_API/Fastapi_blog_2_copy/snippets.py           |   16 [32m+[m
+ FAST_API/Fastapi_blog_2_copy/static/css/main.css   |  295 [32m++[m
+ .../Fastapi_blog_2_copy/static/icons/favicon.ico   |  Bin [31m0[m -> [32m7406[m bytes
+ .../Fastapi_blog_2_copy/static/icons/icon-192.png  |  Bin [31m0[m -> [32m10344[m bytes
+ .../Fastapi_blog_2_copy/static/icons/icon-512.png  |  Bin [31m0[m -> [32m30036[m bytes
+ FAST_API/Fastapi_blog_2_copy/static/icons/icon.png |  Bin [31m0[m -> [32m9848[m bytes
+ FAST_API/Fastapi_blog_2_copy/static/icons/icon.svg |    7 [32m+[m
+ .../Fastapi_blog_2_copy/static/icons/original.png  |  Bin [31m0[m -> [32m32523[m bytes
+ FAST_API/Fastapi_blog_2_copy/static/js/utils.js    |    0
+ .../static/profile_pics/default.jpg                |  Bin [31m0[m -> [32m10994[m bytes
+ .../Fastapi_blog_2_copy/static/site.webmanifest    |   35 [32m+[m
+ FAST_API/Fastapi_blog_2_copy/templates/error.html  |    9 [32m+[m
+ FAST_API/Fastapi_blog_2_copy/templates/home.html   |   34 [32m+[m
+ FAST_API/Fastapi_blog_2_copy/templates/layout.html |  175 [32m+[m
+ FAST_API/Fastapi_blog_2_copy/templates/post.html   |   78 [32m+[m
+ .../Fastapi_blog_2_copy/templates/user_posts.html  |   38 [32m+[m
+ FAST_API/Notes.md                                  |   50 [31m-[m
+ .../04-Sport-venue-management/.python-version      |    1 [32m+[m
+ .../04-Sport-venue-management/Procedure.txt        |    0
+ .../Projects/04-Sport-venue-management/README.md   |    0
+ .../__pycache__/database.cpython-312.pyc           |  Bin [31m0[m -> [32m963[m bytes
+ .../__pycache__/main.cpython-312.pyc               |  Bin [31m0[m -> [32m14645[m bytes
+ .../__pycache__/models.cpython-312.pyc             |  Bin [31m0[m -> [32m3674[m bytes
+ .../__pycache__/schemas.cpython-312.pyc            |  Bin [31m0[m -> [32m2582[m bytes
+ .../test_main.cpython-312-pytest-7.4.4.pyc         |  Bin [31m0[m -> [32m47019[m bytes
+ .../Projects/04-Sport-venue-management/database.py |   28 [32m+[m
+ .../Projects/04-Sport-venue-management/main.py     |  281 [32m++[m
+ .../Projects/04-Sport-venue-management/models.py   |   52 [32m+[m
+ .../04-Sport-venue-management/pyproject.toml       |    7 [32m+[m
+ .../Projects/04-Sport-venue-management/schemas.py  |   70 [32m+[m
+ .../04-Sport-venue-management/sports_venue.db      |  Bin [31m0[m -> [32m20480[m bytes
+ .../04-Sport-venue-management/test_main.py         |  569 [32m+++[m
+ .../04-Sport-venue-management/test_report.md       |   40 [32m+[m
+ .../04-Sport-venue-management/test_report.xml      |    1 [32m+[m
+ .../04-Sport-venue-management/test_sports_venue.db |  Bin [31m0[m -> [32m20480[m bytes
+ .../2-Data-PipeLine_Monitor/.python-version        |    1 [32m+[m
+ .../Projects/2-Data-PipeLine_Monitor/README.md     |    0
+ .../__pycache__/data.cpython-312.pyc               |  Bin [31m0[m -> [32m3713[m bytes
+ .../__pycache__/main.cpython-312.pyc               |  Bin [31m0[m -> [32m4930[m bytes
+ .../__pycache__/schemas.cpython-312.pyc            |  Bin [31m0[m -> [32m1938[m bytes
+ FAST_API/Projects/2-Data-PipeLine_Monitor/data.py  |  313 [32m++[m
+ FAST_API/Projects/2-Data-PipeLine_Monitor/main.py  |  101 [32m+[m
+ .../2-Data-PipeLine_Monitor/pyproject.toml         |    7 [32m+[m
+ .../Projects/2-Data-PipeLine_Monitor/schemas.py    |   29 [32m+[m
+ .../2-Data-PipeLine_Monitor/static/css/style.css   |   31 [32m+[m
+ .../2-Data-PipeLine_Monitor/templates/error.html   |   10 [32m+[m
+ .../2-Data-PipeLine_Monitor/templates/layout.html  |   25 [32m+[m
+ .../templates/pipeline.html                        |   43 [32m+[m
+ .../templates/pipelines.html                       |   31 [32m+[m
+ .../.python-version                                |    1 [32m+[m
+ .../3-AI-model-registry-inference-api/README.md    |    0
+ .../__pycache__/database.cpython-312.pyc           |  Bin [31m0[m -> [32m1028[m bytes
+ .../__pycache__/main.cpython-312.pyc               |  Bin [31m0[m -> [32m3981[m bytes
+ .../__pycache__/models.cpython-312.pyc             |  Bin [31m0[m -> [32m1000[m bytes
+ .../__pycache__/schemas.cpython-312.pyc            |  Bin [31m0[m -> [32m1052[m bytes
+ .../ai_model_registry.db                           |  Bin [31m0[m -> [32m8192[m bytes
+ .../3-AI-model-registry-inference-api/database.py  |   22 [32m+[m
+ .../3-AI-model-registry-inference-api/main.py      |   73 [32m+[m
+ .../3-AI-model-registry-inference-api/models.py    |   13 [32m+[m
+ .../pyproject.toml                                 |    7 [32m+[m
+ .../3-AI-model-registry-inference-api/schemas.py   |   20 [32m+[m
+ .../Projects/AiServiceMonitor_1/.python-version    |    1 [32m+[m
+ FAST_API/Projects/AiServiceMonitor_1/README.md     |    0
+ .../__pycache__/data.cpython-312.pyc               |  Bin [31m0[m -> [32m1985[m bytes
+ .../__pycache__/main.cpython-312.pyc               |  Bin [31m0[m -> [32m3893[m bytes
+ FAST_API/Projects/AiServiceMonitor_1/data.py       |  102 [32m+[m
+ FAST_API/Projects/AiServiceMonitor_1/main.py       |   88 [32m+[m
+ .../Projects/AiServiceMonitor_1/pyproject.toml     |    7 [32m+[m
+ .../AiServiceMonitor_1/templates/dashboard.html    |   21 [32m+[m
+ .../AiServiceMonitor_1/templates/error.html        |   11 [32m+[m
+ .../AiServiceMonitor_1/templates/layout.html       |   23 [32m+[m
+ .../AiServiceMonitor_1/templates/service.html      |   40 [32m+[m
+ .../fast_api/__pycache__/__init__.cpython-312.pyc  |  Bin [31m170[m -> [32m0[m bytes
+ FAST_API/fast_api/__pycache__/main.cpython-312.pyc |  Bin [31m1416[m -> [32m0[m bytes
+ FAST_API/fast_api/main.py                          |   34 [31m-[m
+ FAST_API/fast_api/snippets.txt                     |   17 [31m-[m
+ FAST_API/fastapi_blog_3/.python-version            |    1 [32m+[m
+ FAST_API/fastapi_blog_3/README.md                  |    0
+ .../__pycache__/main.cpython-312.pyc               |  Bin [31m0[m -> [32m1603[m bytes
+ .../__pycache__/snippets.cpython-312.pyc           |  Bin [31m0[m -> [32m633[m bytes
+ FAST_API/fastapi_blog_3/main.py                    |   26 [32m+[m
+ FAST_API/fastapi_blog_3/pyproject.toml             |    7 [32m+[m
+ FAST_API/fastapi_blog_3/snippets.py                |   16 [32m+[m
+ FAST_API/fastapi_blog_3/templates/home.html        |    9 [32m+[m
+ FAST_API/fastapi_blog_3/templates/layout.html      |   12 [32m+[m
+ FAST_API/practice/fastapi_practice/.python-version |    1 [32m+[m
+ FAST_API/practice/fastapi_practice/README.md       |    0
+ .../__pycache__/main.cpython-312.pyc               |  Bin [31m0[m -> [32m4427[m bytes
+ .../__pycache__/snippets.cpython-312.pyc           |  Bin [31m0[m -> [32m644[m bytes
+ FAST_API/practice/fastapi_practice/database.py     |   20 [32m+[m
+ FAST_API/practice/fastapi_practice/main.py         |  126 [32m+[m
+ FAST_API/practice/fastapi_practice/models.py       |   49 [32m+[m
+ FAST_API/practice/fastapi_practice/pyproject.toml  |    7 [32m+[m
+ FAST_API/practice/fastapi_practice/schemas.py      |   20 [32m+[m
+ FAST_API/practice/fastapi_practice/snippets.py     |   16 [32m+[m
+ .../practice/fastapi_practice/static/css/main.css  |  295 [32m++[m
+ .../fastapi_practice/static/icons/favicon.ico      |  Bin [31m0[m -> [32m7406[m bytes
+ .../fastapi_practice/static/icons/icon-192.png     |  Bin [31m0[m -> [32m10344[m bytes
+ .../fastapi_practice/static/icons/icon-512.png     |  Bin [31m0[m -> [32m30036[m bytes
+ .../fastapi_practice/static/icons/icon.png         |  Bin [31m0[m -> [32m9848[m bytes
+ .../fastapi_practice/static/icons/icon.svg         |    7 [32m+[m
+ .../fastapi_practice/static/icons/original.png     |  Bin [31m0[m -> [32m32523[m bytes
+ .../practice/fastapi_practice/static/js/utils.js   |    0
+ .../static/profile_pics/default.jpg                |  Bin [31m0[m -> [32m10994[m bytes
+ .../fastapi_practice/static/site.webmanifest       |   35 [32m+[m
+ .../practice/fastapi_practice/templates/error.html |    9 [32m+[m
+ .../fastapi_practice/templates/home copy.html      |   25 [32m+[m
+ .../practice/fastapi_practice/templates/home.html  |   26 [32m+[m
+ .../fastapi_practice/templates/layout.html         |  249 [32m++[m
+ .../practice/fastapi_practice/templates/post.html  |   60 [32m+[m
+ MATH/.ipynb_checkpoints/Untitled-checkpoint.ipynb  |    6 [32m+[m
+ .../.ipynb_checkpoints/Untitled-checkpoint.ipynb   |    6 [32m+[m
+ MATH/Untitled Folder/Untitled.ipynb                |  569 [32m+++[m
+ MATH/Untitled.ipynb                                |  231 [32m++[m
+ .../.ipynb_checkpoints/Untitled-checkpoint.ipynb   |  912 [32m+++++[m
+ .../.ipynb_checkpoints/Untitled1-checkpoint.ipynb  |    6 [32m+[m
+ .../Algerian_forest_fires_cleaned_dataset.csv      |  244 [32m++[m
+ .../Algerian_forest_fires_dataset_UPDATE.csv       |  249 [32m++[m
+ .../Ridge+Lassso+Elastic+Regression+Practicals.zip |  Bin [31m0[m -> [32m237190[m bytes
+ Machine Learning/RidgeRegression/Untitled.ipynb    | 1156 [32m++++++[m
+ Machine Learning/RidgeRegression/Untitled1.ipynb   | 1184 [32m+++++++[m
+ Machine Learning/RidgeRegression/cleanedFire.csv   |  244 [32m++[m
+ .../.ipynb_checkpoints/Regression-checkpoint.ipynb |    6 [32m+[m
+ .../.ipynb_checkpoints/part-1-checkpoint.ipynb     | 3398 [32m++++++++++++++++++[m
+ .../part-1-heart-checkpoint.ipynb                  |    6 [32m+[m
+ Machine Learning/school/Regression.ipynb           |  185 [32m+[m
+ Machine Learning/school/heart.csv                  |  919 [32m+++++[m
+ Machine Learning/school/insurance.csv              | 1339 [32m+++++++[m
+ Machine Learning/school/part-1-heart.ipynb         | 1562 [32m+++++++++[m
+ Machine Learning/school/part-1.ipynb               | 3666 [32m++++++++++++++++++++[m
+ .../comprehensive_pandas_notes-checkpoint.ipynb    |  695 [32m++++[m
+ .../Pandas_Practice_Set_1-checkpoint.ipynb         | 2550 [32m++++++++++++++[m
+ Pandas/Practice/Employee_update.csv                |   11 [32m+[m
+ Pandas/Practice/Employees.csv                      |   11 [32m+[m
+ Pandas/Practice/Pandas_Practice_Set_1.ipynb        | 2550 [32m++++++++++++++[m
+ Pandas/Practice/Pandas_Practice_Set_2.ipynb        | 1217 [32m+++++++[m
+ Pandas/Practice/Pandas_Practice_Set_3.ipynb        | 1217 [32m+++++++[m
+ Pandas/Practice/Pandas_Practice_Set_4.ipynb        | 1217 [32m+++++++[m
+ Pandas/comprehensive_pandas_notes.ipynb            |   2

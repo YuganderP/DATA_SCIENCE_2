@@ -1,0 +1,13 @@
+age,gender,daily_social_media_hours,platform_usage,sleep_hours,screen_time_before_sleep,academic_performance,physical_activity,social_interaction_level,stress_level,anxiety_level,addiction_level,depression_label
+14,male,7.9,Instagram,7.4,2.9,3.01,1.5,low,2,2,1,0
+19,female,1.9,TikTok,8,2.9,3.22,0.8,high,8,1,10,0
+17,female,1.3,Instagram,7.6,0.5,3.92,0,high,2,4,2,0
+15,male,7.4,TikTok,6.9,1.6,3.48,0.8,medium,1,7,9,0
+15,female,4.7,Both,,3,2.37,1.4,medium,3,5,2,0
+,,,,,,,,,,,,
+18,female,2.5,Instagram,6.4,2.4,2.63,0.7,low,2,2,5,0
+16,male,4,Both,4.2,0.5,2.4,,low,6,10,5,0
+19,female,3.3,TikTok,5,2.1,2.04,0.9,high,1,10,9,0
+15,male,,TikTok,4.9,1.5,3.77,1.1,,1,1,4,0
+16,male,7.2,Both,5.8,2.9,3.16,1.2,medium,5,8,9,0
+13,male,4.9,Instagram,4.7,2.5,3.92,1.2,low,1,10,8,0

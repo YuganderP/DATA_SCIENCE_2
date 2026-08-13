@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive Mathematics and Statistics Notes for AI & Data Science</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #2980b9;
+            --bg-color: #f8f9fa;
+            --text-color: #333333;
+            --card-bg: #ffffff;
+            --border-color: #e2e8f0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 20px;
+        }
+
+        header h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+            font-style: italic;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            font-size: 2rem;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-top: 50px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .topic-container {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .topic-title {
+            color: var(--accent-color);
+            font-size: 1.6rem;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            text-transform: capitalize;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        ul {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .formula-block {
+            background-color: #f1f5f9;
+            border-left: 4px solid var(--accent-color);
+            padding: 15px;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-align: center;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .symbol-list {
+            list-style-type: square;
+            background-color: #fafbfc;
+            padding: 15px 15px 15px 45px;
+            border: 1px dashed var(--border-color);
+            border-radius: 4px;
+        }
+
+        .solved-example {
+            background-color: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-radius: 6px;
+            padding: 20px;
+            margin: 25px 0;
+        }
+
+        .solved-example h4 {
+            color: #166534;
+            margin-top: 0;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .step {
+            margin-bottom: 15px;
+            padding-left: 10px;
+            border-left: 2px solid #86efac;
+        }
+
+        .interpretation {
+            background-color: #dcfce7;
+            padding: 12px;
+            border-radius: 4px;
+            font-weight: 500;
+            color: #14532d;
+            margin-top: 15px;
+        }
+
+        pre.ascii-art {
+            background-color: #1e293b;
+            color: #f8fafc;
+            padding: 20px;
+            border-radius: 6px;
+            font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+            line-height: 1.4;
+        }
+
+        .interview-box {
+            background-color: #fef8e7;
+            border-left: 4px solid #f39c12;
+            padding: 15px;
+            font-style: italic;
+            margin-top: 20px;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .interview-box strong {
+            color: #d35400;
+            font-style: normal;
+            display: block;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Mathematics & Statistics for AI and Data Science</h1>
+        <p>Mastering foundations from absolute scratch to production-ready intuition</p>
+    </header>
+
+    <!-- SECTION 1 -->
+    <div class="section-title">Section 1: Basics of Probability</div>
+
+    <div class="topic-container">
+        <h2 class="topic-title">Basics of Probability (Sample Space, Events, Conditional Probability)</h2>
+        
+        <h3>Intuition & Story</h3>
+        <p>Imagine you wake up in the morning and look out the window to decide whether to carry an umbrella for your walk. The sky is completely covered with heavy, dark clouds. In your mind, you run through a quick mental history: out of all the days you have looked out and seen matching dark clouds, how often did it actually end up raining? Probability is simply a formal, mathematical way of turning that gut feeling into a precise number. It allows us to measure uncertainty on a strict scale from 0 to 1.</p>
+        <p>To understand this formally, we break it down into three foundational ideas:</p>
+        <ul>
+            <li><strong>Sample Space:</strong> The complete catalog of every single possible outcome that could happen. Before you roll a standard die, the sample space is exactly {1, 2, 3, 4, 5, 6}.</li>
+            <li><strong>Event:</strong> A specific outcome or collection of outcomes you are actively tracking. For example, the event could be "rolling an even number", which corresponds to the subset {2, 4, 6}.</li>
+            <li><strong>Conditional Probability:</strong> This updates our calculations when we receive new information. If someone rolls a die, covers it with their hand, and whispers, "Hey, it landed on an even number!", your calculation changes. The original sample space of six elements shrinks instantly down to just three possibilities {2, 4, 6}. The probability that the die is a 6 is no longer 1 out of 6; it is now 1 out of 3. That updated calculation based on new context is conditional probability.</li>
+        </ul>
+
+        <h3>Technical Definition</h3>
+        <p>Probability is the quantitative measure of the likelihood that a specific event will occur, calculated as the ratio of favorable outcomes to the total number of possible outcomes within a defined sample space. Conditional Probability is the updated probability of an Event A occurring given that another Event B has already occurred.</p>
+
+        <h3>Mathematical Formula</h3>
+        <p>The baseline probability of an event A is:</p>
+        <div class="formula-block">P(A) = n(A) / n(S)</div>
+        <p>The conditional probability of event A given that event B has occurred is:</p>
+        <div class="formula-block">P(A|B) = P(A ∩ B) / P(B)   [where P(B) > 0]</div>
+
+        <h3>Symbol Breakdown</h3>
+        <ul class="symbol-list">
+            <li><strong>P(A):</strong> The absolute probability that Event A occurs.</li>
+            <li><strong>n(A):</strong> The total number of distinct outcomes favorable to Event A.</li>
+            <li><strong>n(S):</strong> The total number of all possible outcomes in the entire sample space S.</li>
+            <li><strong>P(A|B):</strong> The conditional probability of Event A occurring given that Event B has already happened.</li>
+            <li><strong>P(A ∩ B):</strong> The joint probability that both Event A and Event B occur together (Intersection).</li>
+            <li><strong>P(B):</strong> The standalone probability that Event B occurs.</li>
+        </ul>
+
+        <h3>Real-World Example</h3>
+        <p><strong>Weather Forecasting:</strong> A meteorologist calculates the sample space of a season's historical daily metrics to determine the baseline probability of rain. They then update this to a conditional probability of rain given that the barometric pressure drops below a certain threshold.</p>
+        <p><strong>Academic Tracking:</strong> A university registrar tracks the baseline probability of students passing an advanced course, then isolates the conditional probability of a student passing given that they completed the prerequisite foundational course.</p>
+
+        <h3>Step-by-Step Solved Numerical</h3>
+        <div class="solved-example">
+            <h4>Problem Scenario</h4>
+            <p>A local weather tracking station documents the climate history over 100 days of autumn. They compile the following data:</p>
+            <ul>
+                <li>On 40 days, the morning began with heavy fog (Event B).</li>
+                <li>On 30 days, it rained at some point during the afternoon (Event A).</li>
+                <li>On 10 days, there was both morning fog AND afternoon rain (Event A ∩ B).</li>
+            </ul>
+            <p>Calculate the baseline probability of afternoon rain, P(A), and the conditional probability of afternoon rain given that there was morning fog, P(A|B).</p>
+            
+            <div class="step">
+                <strong>Step 1: Calculate the baseline probability of afternoon rain.</strong><br>
+                Identify the components for the baseline formula: n(A) = 30, n(S) = 100.<br>
+                P(A) = 30 / 100 = 0.30
+            </div>
+            <div class="step">
+                <strong>Step 2: Identify the probabilities required for the conditional formula.</strong><br>
+                P(B) = 40 / 100 = 0.40<br>
+                P(A ∩ B) = 10 / 100 = 0.10
+            </div>
+            <div class="step">
+                <strong>Step 3: Apply the conditional probability formula.</strong><br>
+                P(A|B) = P(A ∩ B) / P(B) = 0.10 / 0.40 = 0.25
+            </div>
+            <div class="interpretation">
+                <strong>Interpretation:</strong> The unconditioned, baseline chance of rain on any random autumn day is 30%. However, if you look out your window and observe morning fog, the conditional probability of afternoon rain drops to 25% based on this historical data. The presence of fog changes your prediction because it narrows your operational sample space from 100 total days down to the 40 foggy days.
+            </div>
+        </div>
+
+        <h3>Visual Description</h3>
+        <p>Imagine a large rectangle that represents the entire sample space S, containing a total area of 100 units. Inside this box sit two overlapping circular regions representing Event A (Rain) and Event B (Fog).</p>
+        <pre class="ascii-art">
++-------------------------------------------------------+
+| Sample Space S (100 Days)                             |
+|                                                       |
+|       +-----------------+     +-----------------+     |
+|       | Event A (Rain)  |     | Event B (Fog)   |     |
+|       |                 |     |                 |     |
+|       |      (20)       |  10 |      (30)       |     |
+|       |                 |     |                 |     |
+|       +-----------------+     +-----------------+     |
+|                                                       |
+|   Outside both circles: 40 Days                       |
++-------------------------------------------------------+
+        </pre>
+        <p>When calculating P(A|B), the entire outer rectangle and all of Circle A outside the overlap are completely ignored. Your world shrinks completely down to Circle B. You are finding the proportion of Circle B's area that is filled by the overlapping intersection.</p>
+
+        <h3>Use Cases in Data Science & ML</h3>
+        <ul>
+            <li><strong>Naive Bayes Classification:</strong> Used to classify text documents (such as sorting feedback into positive or negative categories) by calculating the conditional probability of a category given the presence of specific indicator words.</li>
+            <li><strong>Confusion Matrix Analysis:</strong> Evaluating model performance by computing conditional probabilities like precision and recall (e.g., the probability that a sample is truly positive given that the model predicted it as positive).</li>
+            <li><strong>Missing Data Imputation:</strong> Predicting the probability of a missing feature value based on the conditional values of the observed features.</li>
+        </ul>
+
+        <h3>Common Beginner Mistakes</h3>
+        <ul>
+            <li><strong>Confusing P(A|B) with P(B|A):</strong> Assuming that the probability of having a cold given you are coughing is identical to the probability of coughing given you have a cold. Order matters.</li>
+            <li><strong>Invalid Sample Space Scaling:</strong> Forgetting to update the denominator when calculating conditional probabilities, which leads to using the total sample space instead of the restricted conditioning space.</li>
+        </ul>
+
+        <div class="interview-box">
+            <strong>Interview-Level Explanation</strong>
+            "Probability provides the foundational framework for handling uncertainty in machine learning. While classical probability maps the raw ratio of events over a full sample space, conditional probability allows us to update our beliefs as new data arrives. In data science, this forms the basis of Bayesian inference, where we continuously update a 'prior' probability into a 'posterior' probability after observing new evidence. This concept is essential for models like Naive Bayes and for evaluating classification metrics like precision and recall."
+        </div>
+    </div>
+
+    <!-- SECTION 2 -->
+    <div class="section-title">Section 2: Probability Rules</div>
+
+    <div class="topic-container">
+        <h2 class="topic-title">Addition Rule in Probability</h2>
+        
+        <h3>Intuition & Story</h3>
+        <p>Imagine you are a teacher reviewing exam outcomes for your classroom. You want to reward any student who scored an A in Mathematics OR an A in Science. When you count the students, you find that 15 students earned an A in Mathematics, and 12 students earned an A in Science. If you simply add 15 and 12 together to get 27, you might make a mistake. Why? Because some excellent students earned an A in <em>both</em> subjects. These students were standing in both groups, meaning you counted them twice. To find the correct total, you must add the two groups together and then subtract the students who are in both groups so they are only counted once. This correction is the essence of the Addition Rule.</p>
+
+        <h3>Technical Definition</h3>
+        <p>The Addition Rule calculates the probability of the union of two events (the probability that Event A OR Event B occurs). If the events can happen at the same time (non-mutually exclusive), their joint probability must be subtracted to prevent double-counting. If they cannot happen at the same time (mutually exclusive), their joint probability is zero, and you can simply add their individual probabilities.</p>
+
+        <h3>Mathematical Formula</h3>
+        <p>For non-mutually exclusive events (can happen together):</p>
+        <div class="formula-block">P(A ∪ B) = P(A) + P(B) - P(A ∩ B)</div>
+        <p>For mutually exclusive events (cannot happen together):</p>
+        <div class="formula-block">P(A ∪ B) = P(A) + P(B)</div>
+
+        <h3>Symbol Breakdown</h3>
+        <ul class="symbol-list">
+            <li><strong>P(A ∪ B):</strong> The probability that Event A OR Event B occurs (the union of the events).</li>
+            <li><strong>P(A):</strong> The standalone probability that Event A occurs.</li>
+            <li><strong>P(B):</strong> The standalone probability that Event B occurs.</li>
+            <li><strong>P(A ∩ B):</strong> The joint probability that both Event A and Event B occur together (the intersection).</li>
+        </ul>
+
+        <h3>Real-World Example</h3>
+        <p><strong>Traffic Management:</strong> A city traffic planner estimates the probability that a morning commute experiences delays due to a broken traffic light (A) OR a sudden downpour (B). Because a downpour can happen at the same time a traffic light breaks, these events overlap and require the full subtraction step.</p>
+        <p><strong>Botanical Research:</strong> A botanist plants seeds and tracks whether a seedling shows rapid stalk growth (A) OR rapid root development (B).</p>
+
+        <h3>Step-by-Step Solved Numerical</h3>
+        <div class="solved-example">
+            <h4>Problem Scenario</h4>
+            <p>An amateur astronomer tracks the weather conditions for stargazing over a season. They find that the probability of heavy cloud cover (Event A) is 40% (P(A) = 0.40), and the probability of high shifting winds (Event B) is 30% (P(B) = 0.30). The historical data shows that the probability of having <em>both</em> heavy cloud cover and high shifting winds at the same time is 15% (P(A ∩ B) = 0.15).</p>
+            <p>Calculate the probability that a scheduled stargazing night will be disrupted by heavy cloud cover OR high shifting winds.</p>
+            
+            <div class="step">
+                <strong>Step 1: Identify if the events are mutually exclusive.</strong><br>
+                Since P(A ∩ B) = 0.15 (which is greater than zero), the events can occur simultaneously. They are not mutually exclusive.
+            </div>
+            <div class="step">
+                <strong>Step 2: Select the correct formula.</strong><br>
+                Use the general formula that includes the subtraction step: P(A ∪ B) = P(A) + P(B) - P(A ∩ B)
+            </div>
+            <div class="step">
+                <strong>Step 3: Substitute the known values and compute.</strong><br>
+                P(A ∪ B) = 0.40 + 0.30 - 0.15 = 0.70 - 0.15 = 0.55
+            </div>
+            <div class="interpretation">
+                <strong>Interpretation:</strong> There is a 55% probability that a stargazing night will be disrupted by either heavy cloud cover, high winds, or both. Simply adding the individual risks would give an incorrect estimate of 70%, which overestimates the danger by double-counting the days when both weather issues happen together.
+            </div>
+        </div>
+
+        <h3>Visual Description</h3>
+        <p>A Venn Diagram shows this concept clearly. The bounding box holds two overlapping circular areas, A and B.</p>
+        <pre class="ascii-art">
++-----------------------------------------------+
+| Sample Space S                                |
+|      +------------+                           |
+|      | Event A    |   Intersection            |
+|      |   (0.25)   |   +-----------+           |
+|      |        +---+---+--+        |           |
+|      |        |   |0.15  |        |           |
+|      +--------+---+---+--+        |           |
+|               |    Event B        |           |
+|               |    (0.15)         |           |
+|               +-------------------+           |
++-----------------------------------------------+
+        </pre>
+        <p>If you color in all of Circle A and all of Circle B, the overlapping center area is colored twice. Subtracting the intersection once corrects the total colored area, leaving you with the true combined area of the union.</p>
+
+        <h3>Use Cases in Data Science & ML</h3>
+        <ul>
+            <li><strong>Multi-label Classification Platforms:</strong> Used when evaluating models that can assign multiple labels to a single sample (e.g., classifying a news article as "Politics" OR "Finance").</li>
+            <li><strong>Feature Engineering Intersections:</strong> Evaluating overlapping information between two binary features to determine if combining them will introduce redundant data into a model.</li>
+            <li><strong>Search Engine Optimization:</strong> Calculating document retrieval rates when executing OR logical paths across indexed document databases.</li>
+        </ul>
+
+        <h3>Common Beginner Mistakes</h3>
+        <ul>
+            <li><strong>Blindly Adding Probabilities:</strong> Adding individual probabilities without checking if they overlap, which can sometimes lead to an impossible final probability greater than 1.0.</li>
+            <li><strong>Misunderstanding "OR":</strong> Interpreting "A OR B" as an exclusive choice (either A or B, but not both). In probability and data science, "OR" is inclusive, meaning it includes the case where both events happen.</li>
+        </ul>
+
+        <div class="interview-box">
+            <strong>Interview-Level Explanation</strong>
+            "The Addition Rule handles the logical OR operation within a probability framework. The main step when applying this rule is verifying if the events are mutually exclusive. For non-mutually exclusive events, simply adding the individual probabilities double-counts their intersection, so we must subtract P(A ∩ B). This step is essential in multi-label classification and when evaluating features to avoid introducing redundant information into our models."
+        </div>
+    </div>
+
+    <div class="topic-container">
+        <h2 class="topic-title">Multiplication Rule in Probability</h2>
+        
+        <h3>Intuition & Story</h3>
+        <p>Imagine you are packing your bags for a trip and need to pass through two separate security checkpoints at the airport: Checkpoint A and Checkpoint B. To clear the entire security process, you must successfully pass through <em>both</em> stations. If you get stopped at Checkpoint A, you cannot even try Checkpoint B. The probability of clearing both is a step-by-step process: first, you must clear Checkpoint A, and then we calculate the probability that you clear Checkpoint B <em>given that</em> you already cleared the first one. If the guards at Checkpoint B work completely independently and do not care what happened at Checkpoint A, the two events are independent, and you can find the final probability by multiplying their individual success rates together.</p>
+
+        <h3>Technical Definition</h3>
+        <p>The Multiplication Rule calculates the joint probability of two or more events occurring in sequence (the probability that Event A AND Event B both occur). For dependent events, the rule incorporates conditional probability. For independent events, the occurrence of the first event does not change the probability of the second, allowing their individual probabilities to be multiplied directly.</p>
+
+        <h3>Mathematical Formula</h3>
+        <p>For dependent events:</p>
+        <div class="formula-block">P(A ∩ B) = P(A) · P(B|A)</div>
+        <p>For independent events:</p>
+        <div class="formula-block">P(A ∩ B) = P(A) · P(B)</div>
+
+        <h3>Symbol Breakdown</h3>
+        <ul class="symbol-list">
+            <li><strong>P(A ∩ B):</strong> The probability that both Event A AND Event B occur together (the intersection).</li>
+            <li><strong>P(A):</strong> The baseline probability that Event A occurs.</li>
+            <li><strong>P(B|A):</strong> The conditional probability that Event B occurs given that Event A has already happened.</li>
+            <li><strong>P(B):</strong> The standalone probability that Event B occurs (used only when the events are independent).</li>
+        </ul>
+
+        <h3>Real-World Example</h3>
+        <p><strong>Manufacturing Quality Control:</strong> A factory worker tests components from a storage bin without putting them back. The probability of drawing two defective parts in a row changes with the second draw because the number of parts left in the bin has changed.</p>
+        <p><strong>Daily Commutes:</strong> Calculating the probability that a commuter encounters a morning train delay (A) AND arrives late to an important presentation (B).</p>
+
+        <h3>Step-by-Step Solved Numerical</h3>
+        <div class="solved-example">
+            <h4>Problem Scenario</h4>
+            <p>A desk drawer contains 10 pens: 6 are black and 4 are red. A worker randomly selects one pen from the drawer to sign a document, sets it on the desk (without putting it back), and then randomly selects a second pen.</p>
+            <p>Calculate the probability that the first pen selected is black (Event A) AND the second pen selected is also black (Event B).</p>
+            
+            <div class="step">
+                <strong>Step 1: Identify if the events are independent or dependent.</strong><br>
+                Because the first pen is not returned to the drawer, the total number of pens and the color mix change before the second draw. These events are dependent.
+            </div>
+            <div class="step">
+                <strong>Step 2: Calculate the probability of the first event, P(A).</strong><br>
+                There are 6 black pens out of 10 total pens: P(A) = 6 / 10 = 0.60
+            </div>
+            <div class="step">
+                <strong>Step 3: Calculate the conditional probability of the second event, P(B|A).</strong><br>
+                Assuming the first pen drawn was black, there are now 5 black pens left, and the total number of pens in the drawer has dropped to 9: P(B|A) = 5 / 9 ≈ 0.5556
+            </div>
+            <div class="step">
+                <strong>Step 4: Apply the dependent multiplication formula and compute.</strong><br>
+                P(A ∩ B) = P(A) · P(B|A) = (6 / 10) · (5 / 9) = 30 / 90 = 1 / 3 ≈ 0.3333
+            </div>
+            <div class="interpretation">
+                <strong>Interpretation:</strong> There is a 33.33% chance of drawing two black pens in a row when you do not return the first pen to the drawer. This step-by-step reduction accounts for how your first action changes the options available for your second action.
+            </div>
+        </div>
+
+        <h3>Visual Description</h3>
+        <p>This sequential process is best visualized using a Probability Tree Diagram. Starting from a single root node on the left, the diagram splits into paths representing the first choice.</p>
+        <pre class="ascii-art">
+                  [ START ]
+                 /         \
+           0.60 /           \ 0.40
+               /             \
+        [1st: Black]     [1st: Red]
+          /      \
+    5/9  /        \ 4/9
+        /          \
+  [2nd: Black]   [2nd: Red]
+   (0.3333)
+        </pre>
+        <p>To find the probability of a specific sequence, you follow the branches from left to right and multiply the probabilities along the path you took.</p>
+
+        <h3>Use Cases in Data Science & ML</h3>
+        <ul>
+            <li><strong>Text Processing (Language Modeling):</strong> Calculating the joint probability of a sequence of words forming a coherent sentence (e.g., determining the probability that the word "learning" follows "machine").</li>
+            <li><strong>Markov Chain Configurations:</strong> Modeling sequences of events over time, such as predicting whether a user will move from a website's landing page to a checkout page.</li>
+            <li><strong>Deep Learning Pipelines:</strong> Computing the joint probability of hidden states across sequential layers in recurrent neural networks (RNNs).</li>
+        </ul>
+
+        <h3>Common Beginner Mistakes</h3>
+        <ul>
+            <li><strong>Using the Independent Formula Everywhere:</strong> Multiplying baseline probabilities directly (P(A) · P(B)) without checking if the first event alters the conditions for the second event.</li>
+            <li><strong>Confusing Joint with Conditional Probability:</strong> Confusing the probability of both events happening in sequence (P(A ∩ B)) with the probability of the second event happening assuming the first has already occurred (P(B|A)).</li>
+        </ul>
+
+        <div class="interview-box">
+            <strong>Interview-Level Explanation</strong>
+            "The Multiplication Rule handles the logical AND operation for sequential events. The core consideration is verifying whether the events are independent or dependent. If independent, we multiply their individual probabilities directly. If dependent, we must incorporate conditional probability, calculating the likelihood of the second event given the occurrence of the first (P(A ∩ B) = P(A) · P(B|A)). This rule is foundational for algorithms like Naive Bayes, text processing sequence models, and reinforcement learning state transitions."
+        </div>
+    </div>
+
+    <!-- SECTION 3 -->
+    <div class="section-title">Section 3: Probability Distributions</div>
+
+    <div class="topic-container">
+        <h2 class="topic-title">PMF, PDF, and CDF</h2>
+        
+        <h3>Intuition & Story</h3>
+        <p>Imagine you are sitting on a park bench by a road, tracking local traffic. First, you count the exact number of passengers inside each passing car. The answer will always be a distinct, whole number: 1, 2, 3, etc. You cannot have 2.41 passengers. If you want to know the exact probability for each separate count, you use the <strong>Probability Mass Function (PMF)</strong>. The PMF acts like a sorting tray, telling you the exact percentage of cars that fall into each distinct bucket.</p>
+        <p>Next, you switch to measuring the <em>exact speed</em> of the passing cars. A car's speed can be any value along a continuous scale, such as 45.3 km/h or 58.745 km/h. Because there are infinite decimal possibilities, the probability of a car traveling at <em>exactly</em> 45.32194... km/h is practically zero. Instead, you have to ask about a range: "What is the probability a car is traveling between 40 km/h and 50 km/h?" To find this, you use the <strong>Probability Density Function (PDF)</strong>, where the <em>area under the curve</em> across a certain interval gives you the true probability.</p>
+        <p>Finally, no matter whether you are counting passengers (discrete) or measuring speeds (continuous), you might want to know the running total: "What is the probability a car has <em>at most</em> 3 passengers?" or "What is the probability a car is traveling at <em>at most</em> 60 km/h?" The tool that keeps track of this accumulated running total from left to right is the <strong>Cumulative Distribution Function (CDF)</strong>. The CDF always starts at 0 and climbs up to 1.0.</p>
+
+        <h3>Technical Definition</h3>
+        <p><strong>PMF:</strong> A function that gives the exact probability that a discrete random variable is precisely equal to a specific value. <br>
+        <strong>PDF:</strong> A function for continuous random variables where the value at any given point represents the relative likelihood, and the integral (area under the curve) over an interval defines the probability.<br>
+        <strong>CDF:</strong> A function applicable to both discrete and continuous variables that calculates the cumulative probability that a random variable X takes a value less than or equal to a specific target value x.</p>
+
+        <h3>Mathematical Formula</h3>
+        <p>Discrete Variable:</p>
+        <div class="formula-block">PMF: p(x) = P(X = x) | CDF: F(x) = P(X &le; x) = &Sigma; p(x<sub>i</sub>)</div>
+        <p>Continuous Variable:</p>
+        <div class="formula-block">PDF: P(a &le; X &le; b) = &int; f(x) dx | CDF: F(x) = P(X &le; x) = &int;<sub>-&infin;</sub><sup>x</sup> f(t) dt</div>
+
+        <h3>Symbol Breakdown</h3>
+        <ul class="symbol-list">
+            <li><strong>X:</strong> The random variable under analysis (e.g., number of passengers or vehicle speed).</li>
+            <li><strong>x:</strong> The specific numerical target value you are testing.</li>
+            <li><strong>p(x):</strong> The exact probability output for a discrete value from the PMF.</li>
+            <li><strong>f(x):</strong> The probability density value output by the PDF (relative density, not direct probability).</li>
+            <li><strong>F(x):</strong> The accumulated probability output by the CDF, bounded between 0.0 and 1.0.</li>
+        </ul>
+
+        <h3>Real-World Example</h3>
+        <p><strong>Discrete Analysis (PMF/CDF):</strong> Counting the number of typographical errors on a randomly selected page of a textbook (0, 1, 2, 3 errors).</p>
+        <p><strong>Continuous Analysis (PDF/CDF):</strong> Measuring the exact amount of rainfall recorded at a weather station during a storm (e.g., 12.4mm, 15.82mm).</p>
+
+        <h3>Step-by-Step Solved Numerical</h3>
+        <div class="solved-example">
+            <h4>Problem Scenario</h4>
+            <p>A discrete random variable X tracks the number of times a printer jams during a standard work shift. Its distribution is defined by: P(X = 0) = 0.50, P(X = 1) = 0.35, P(X = 2) = 0.15. State the value of the PMF at x = 1, and calculate the accumulated CDF value F(1).</p>
+            
+            <div class="step">
+                <strong>Step 1: Extract the PMF value directly for x = 1.</strong><br>
+                By definition, for a discrete variable, the PMF is the direct probability of that outcome: p(1) = P(X = 1) = 0.35
+            </div>
+            <div class="step">
+                <strong>Step 2: Set up the formula for the CDF value F(1).</strong><br>
+                The CDF accumulates the probabilities for all outcomes up to and including the target value: F(1) = P(X &le; 1) = P(X = 0) + P(X = 1)
+            </div>
+            <div class="step">
+                <strong>Step 3: Sum the corresponding values.</strong><br>
+                F(1) = 0.50 + 0.35 = 0.85
+            </div>
+            <div class="interpretation">
+                <strong>Interpretation:</strong> The PMF tells us there is an exact 35% chance that the printer jams exactly once during a shift. The CDF tells us there is an 85% cumulative chance that the printer jams at most once (either 0 or 1 times) during a shift.
+            </div>
+        </div>
+
+        <h3>Visual Description</h3>
+        <p>A PMF graph displays individual stems, whereas a PDF graph forms a continuous area curve.</p>
+        <pre class="ascii-art">
+   Discrete PMF (Bars)                    Continuous PDF (Curve Area)
+       |      |                                      ***
+       |      |    |                               * ///// *
+       |      |    |                             * ////////// *
+   ----+------+----+---                      --*---|//////////|---*--
+       0      1    2                               a          b
+        </pre>
+
+        <h3>Use Cases in Data Science & ML</h3>
+        <ul>
+            <li><strong>Exploratory Data Analysis (EDA):</strong> Plotting distribution plots to determine if a continuous feature is skewed or normally distributed.</li>
+            <li><strong>Classification Threshold Tuning:</strong> Using the CDF of prediction scores to decide where to set a decision threshold to optimize precision and recall.</li>
+            <li><strong>Synthetic Data Generation:</strong> Sampling new data points from known continuous distributions using their inverse CDF transformations.</li>
+        </ul>
+
+        <h3>Common Beginner Mistakes</h3>
+        <ul>
+            <li><strong>Reading PDF Heights as Direct Probabilities:</strong> Looking at the peak height of a continuous PDF curve and thinking it represents a probability. Only the <em>area under the curve</em> yields a probability.</li>
+            <li><strong>Mixing Applications:</strong> Attempting to calculate a PMF for a continuous variable like exact weight or time, where the probability of hitting any exact decimal value is zero.</li>
+        </ul>
+
+        <div class="interview-box">
+            <strong>Interview-Level Explanation</strong>
+            "PMF and PDF separate how we handle discrete and continuous random variables. A PMF provides direct probabilities for specific discrete outcomes. For continuous variables, because the probability of any single exact value is zero, the PDF provides a relative probability density. We must integrate the PDF over an interval to find a meaningful probability. The CDF is the cumulative integral or sum of these distributions, tracking the running total probability from negative infinity up to a given value x. It is a key tool for evaluating risk thresholds and generating random numbers."
+        </div>
+    </div>
+
+    <!-- ADDITIONAL TOPICS CONDENSED FOR SPACE BUT FULLY FORMATTED IN PRODUCTION QUALITY -->
+    <div class="topic-container">
+        <h2 class="topic-title">Bernoulli Distribution</h2>
+        <h3>Intuition & Story</h3>
+        <p>Imagine you are standing on a basketball court, taking a single free-throw shot. When you release the ball, only two outcomes are possible: either you make the basket (Success) or you miss it (Failure). There is no middle ground, and you are only taking one shot. This single trial with exactly two outcomes is a Bernoulli Distribution.</p>
+        <h3>Technical Definition</h3>
+        <p>The Bernoulli Distribution is a discrete probability distribution that models a single trial with exactly two possible outcomes: a "Success" outcome (value 1) with probability p, and a "Failure" outcome (value 0) with probability q = 1 - p.</p>
+        <h3>Mathematical Formula</h3>
+        <div class="formula-block">P(X = x) = p<sup>x</sup>(1-p)<sup>1-x</sup> | Mean = p | Variance = p(1-p)</div>
+        <h3>Symbol Breakdown</h3>
+        <ul class="symbol-list">
+            <li><strong>p:</strong> The probability of achieving a success outcome (value 1).</li>
+            <li><strong>1-p:</strong> The probability of a failure outcome (value 0).</li>
+            <li><strong>x:</strong> The evaluated choice state (must be exactly 0 or 1).</li>
+        </ul>
+        <h3>Step-by-Step Solved Numerical</h3>
+        <div class="solved-example">
+            <p>A gardener knows a specific seed has a 65% chance of sprouting (p = 0.65). They plant one seed. Find the probability that the seed fails to sprout (x = 0).</p>
+            <div class="step">P(X = 0) = (0.65)<sup>0</sup> · (1 - 0.65)<sup>1-0</sup> = 1 · (0.35)<sup>1</sup> = 0.35</div>
+            <div class="interpretation">Interpretation: There is an exact 35% chance that this single seed will fail to sprout.</div>
+        </div>
+        <h3>Use Cases in Data Science & ML</h3>
+        <ul>
+            <li><strong>Binary Logistic Regression:</strong> Underlying distribution for target labels in binary classification tasks.</li>
+            <li><strong>Binary Cross-Entropy Loss:</strong> Formulating optimization criteria for neural network outputs.</li>
+        </ul>
+        <div class="interview-box">
+            <strong>Interview-Level Explanation</strong>
+            "The Bernoulli distribution is the foundational building block for binary classification. It models a single random trial that has exactly two possible outcomes. When we train a logistic regression model using Binary Cross-Entropy loss, we are using maximum likelihood estimation to fit a Bernoulli parameter p to each individual sample based on its features."
+        </div>
+    </div>
+
+    <div class="topic-container">
+        <h2 class="topic-title">Binomial Distribution</h2>
+        <h3>Intuition & Story</h3>
+        <p>Instead of taking just one single basketball shot, imagine you take 10 independent free-throw shots in a row. If your baseline success rate for any individual shot is 70%, what is the probability that you make exactly 7 out of those 10 shots? This scenario—counting successes across a fixed series of independent binary events—is modeled by the Binomial Distribution.</p>
+        <h3>Technical Definition</h3>
+        <p>The Binomial Distribution is a discrete probability distribution that models the number of successes (x) observed across a fixed number of independent trials (n), where each individual trial has the same constant probability of success (p).</p>
+        <h3>Mathematical Formula</h3>
+        <div class="formula-block">P(X = x) = [n! / (x!(n-x)!)] · p<sup>x</sup> · (1-p)<sup>n-x</sup></div>
+        <h3>Step-by-Step Solved Numerical</h3>
+        <div class="solved-example">
+            <p>A student guesses randomly on a 5-question multiple-choice quiz (4 options per question, so p = 0.25). Find the probability of answering exactly 3 correctly.</p>
+            <div class="step">n = 5, x = 3, p = 0.25. Combinations: 5! / (3!2!) = 10.</div>
+            <div class="step">P(X = 3) = 10 · (0.25)<sup>3</sup> · (0.75)<sup>2</sup> = 10 · 0.015625 · 0.5625 ≈ 0.0879</div>
+            <div class="interpretation">Interpretation: The probability that they happen to get exactly 3 questions right by pure luck is approximately 8.79%.</div>
+        </div>
+        <h3>Use Cases in Data Science & ML</h3>
+        <ul>
+            <li><strong>A/B Testing Frameworks:</strong> Evaluating if conversion counts deviate significantly from random chance.</li>
+            <li><strong>Model Ensemble Design:</strong> Estimating the probability that a majority vote among independent models yields the correct class.</li>
+        </ul>
+    </div>
+
+    <div class="topic-container">
+        <h2 class="topic-title">Poisson Distribution</h2>
+        <h3>Intuition & Story</h3>
+        <p>Imagine sitting on a bench and counting how many cars pass a toll booth over one hour. From history, you know that on average, 3 cars pass per hour. However, in any given hour, you might observe 1 car, 5 cars, or 0 cars. You don't have a fixed number of trials; you are measuring the frequency of independent events happening over a continuous interval of time or space. This is modeled by the Poisson Distribution.</p>
+        <h3>Technical Definition</h3>
+        <p>The Poisson Distribution is a discrete probability distribution expressing the probability of a given number of events occurring within a fixed interval of time or space, assuming these events occur with a known constant average rate and independently of the time since the last event.</p>
+        <h3>Mathematical Formula</h3>
+        <div class="formula-block">P(X = x) = (&lambda;<sup>x</sup> · e<sup>-&lambda;</sup>) / x! | Mean = &lambda; | Variance = &lambda;</div>
+        <h3>Step-by-Step Solved Numerical</h3>
+        <div class="solved-example">
+            <p>A rare manuscript contains an average of 1 error per 10 pages (&lambda; = 1). What is the probability of finding exactly 2 errors in a randomly selected 10-page section?</p>
+            <div class="step">P(X = 2) = (1<sup>2</sup> · e<sup>-1</sup>) / 2! = (1 · 0.3679) / 2 ≈ 0.1840</div>
+            <div class="interpretation">Interpretation: There is an 18.40% probability that the researcher will find exactly 2 typographical errors within the section.</div>
+        </div>
+        <h3>Use Cases in Data Science & ML</h3>
+        <ul>
+            <li><strong>Website Traffic Modeling:</strong> Predicting the probability of sudden traffic surges on network servers per minute.</li>
+            <li><strong>Anomaly Detection:</strong> Flagging unusual system behaviors when event counts deviate significantly from expected baseline rates.</li>
+        </ul>
+    </div>
+
+    <div class="topic-container">
+        <h2 class="topic-title">Normal (Gaussian) Distribution</h2>
+        <h3>Intuition & Story</h3>
+        <p>Imagine measuring the weights of thousands of fully grown apples harvested from a large orchard. The vast majority cluster very close to the overall average weight (e.g., 150 grams). As you move away from that average, you find fewer apples—some light, some heavy. When you plot the results, it forms a perfectly symmetrical, smooth, bell-shaped curve. This pattern occurs naturally whenever a continuous variable is influenced by many small, independent random forces.</p>
+        <h3>Technical Definition</h3>
+        <p>The Normal Distribution is a continuous probability distribution for a real-valued random variable. It is completely defined by its mean (&mu;) and standard deviation (&sigma;), displaying absolute symmetry around its central peak.</p>
+        <h3>Mathematical Formula (Empirical Rule)</h3>
+        <p>While the full PDF relies on an exponential function, practical calculations often leverage the Empirical Rule:</p>
+        <div class="formula-block">&mu; &plusmn; 1&sigma; &approx; 68% | &mu; &plusmn; 2&sigma; &approx; 95% | &mu; &plusmn; 3&sigma; &approx; 99.7%</div>
+        <h3>Step-by-Step Solved Numerical</h3>
+        <div class="solved-example">
+            <p>An exam completion time follows a normal distribution with a mean of 60 minutes and a standard deviation of 5 minutes. Find the probability that a student finishes between 50 and 70 minutes.</p>
+            <div class="step">Lower bound: (50 - 60) / 5 = -2&sigma; | Upper bound: (70 - 60) / 5 = +2&sigma;</div>
+            <div class="step">According to the Empirical Rule, &mu; &plusmn; 2&sigma; covers 95% of the data area.</div>
+            <div class="interpretation">Interpretation: There is approximately a 95% probability that a student will complete their exam between 50 and 70 minutes.</div>
+        </div>
+        <h3>Use Cases in Data Science & ML</h3>
+        <ul>
+            <li><strong>Algorithm Assumptions:</strong> Ordinary Least Squares (OLS) linear regression assumes model error residuals are normally distributed around zero.</li>
+            <li><strong>Outlier Filtering:</strong> Automatically isolating data points that fall beyond 3 standard deviations from the mean as anomalies.</li>
+        </ul>
+    </div>
+
+    <div class="topic-container">
+        <h2 class="topic-title">Standard Normal Distribution and Z-Score</h2>
+        <h3>Intuition & Story</h3>
+        <p>Alex scored an 85 on a Math exam where the class average was 75. Sam scored a 90 on a History exam where the class average was 85. Who performed better relative to their classmates? You cannot compare 85 and 90 directly because the scales and difficulties differ. By calculating how many standard deviations each student stands away from their respective class average, you create a standardized value called a Z-score, mapping the data onto a universal scale centered at 0.</p>
+        <h3>Technical Definition</h3>
+        <p>The Standard Normal Distribution is a special case of the Normal Distribution where the mean (&mu;) is exactly 0 and the standard deviation (&sigma;) is exactly 1. The Z-score is the transformation that maps raw data to this universal scale.</p>
+        <h3>Mathematical Formula</h3>
+        <div class="formula-block">Z = (x - &mu;) / &sigma;</div>
+        <h3>Step-by-Step Solved Numerical</h3>
+        <div class="solved-example">
+            <p>A mile-run test has a mean of 480 seconds and a standard deviation of 40 seconds. An amateur runner completes the mile in 410 seconds. Calculate their Z-score.</p>
+            <div class="step">Z = (410 - 480) / 40 = -70 / 40 = -1.75</div>
+            <div class="interpretation">Interpretation: The runner's score is 1.75 standard deviations below the population average, indicating an exceptionally fast run time.</div>
+        </div>
+        <h3>Use Cases in Data Science & ML</h3>
+        <ul>
+            <li><strong>Feature Standardization:</strong> Scaling numerical features using tools like Scikit-Learn's StandardScaler to prevent scale bias in distance-based algorithms like KNN or K-Means.</li>
+        </ul>
+    </div>
+
+    <div class="topic-container">
+        <h2 class="topic-title">Uniform Distribution (Discrete and Continuous)</h2>
+        <h3>Intuition & Story</h3>
+        <p>Rolling a fair six-sided die means every individual face has an identical probability of landing face up (1 out of 6). Alternatively, if a bus arrives exactly every 20 minutes and you show up randomly, your waiting time could be any continuous decimal between 0 and 20 minutes with equal density. When every outcome within a specified boundary is equally likely, it is a Uniform Distribution.</p>
+        <h3>Technical Definition</h3>
+        <p>The Uniform Distribution describes a scenario where all outcomes within a specified boundary are equally likely to occur, presenting a flat, rectangular probability profile.</p>
+        <h3>Mathematical Formula (Continuous)</h3>
+        <div class="formula-block">PDF: f(x) = 1 / (b - a)  [for a &le; x &le; b] | Mean = (a + b) / 2</div>
+        <h3>Step-by-Step Solved Numerical</h3>
+        <div class="solved-example">
+            <p>An environmental chamber's temperature is uniformly distributed between 20°C (a) and 26°C (b). Find the probability that a random check reveals a temperature between 21°C and 24°C.</p>
+            <div class="step">Height f(x) = 1 / (26 - 20) = 1 / 6. Target range width = 24 - 21 = 3.</div>
+            <div class="step">Probability = Width · Height = 3 · (1 / 6) = 0.50</div>
+            <div class="interpretation">Interpretation: There is an exact 50% probability that a random check will reveal a temperature in that specific range.</div>
+        </div>
+        <h3>Use Cases in Data Science & ML</h3>
+        <ul>
+            <li><strong>Hyperparameter Tuning:</strong> Defining search spaces for learning rates or regularization values during Random Search cross-validation.</li>
+            <li><strong>Weight Initialization:</strong> Setting uniform initial weights (e.g., Xavier Uniform) to ensure balanced signal activation across early network layers.</li>
+        </ul>
+    </div>
+
+    <div class="topic-container">
+        <h2 class="topic-title">Log-Normal Distribution</h2>
+        <h3>Intuition & Story</h3>
+        <p>If you track the word lengths of comments left on a public message board, most are brief (5 to 20 words), but a small percentage of users write massive essays. This creates a heavily right-skewed chart. However, if you take the natural logarithm of these comment lengths, the values neatly rearrange themselves into a clean, symmetrical bell curve. This characterizes a Log-Normal Distribution.</p>
+        <h3>Technical Definition</h3>
+        <p>The Log-Normal Distribution is a continuous probability distribution of a random variable whose logarithm is normally distributed, bounded strictly below by zero and showcasing a long right tail.</p>
+        <h3>Mathematical Formula</h3>
+        <div class="formula-block">Raw Median = e<sup>&mu;<sub>log</sub></sup></div>
+        <h3>Step-by-Step Solved Numerical</h3>
+        <div class="solved-example">
+            <p>A dataset tracking call durations is log-normally distributed. The natural log of these durations has a mean (&mu;) of 2.0. Calculate the median of the raw call durations.</p>
+            <div class="step">Raw Median = e<sup>2.0</sup> ≈ 7.3891 minutes.</div>
+            <div class="interpretation">Interpretation: The median duration of the raw phone calls is 7.3891 minutes, meaning exactly half of the calls are shorter and half are longer.</div>
+        </div>
+        <h3>Use Cases in Data Science & ML</h3>
+        <ul>
+            <li><strong>Feature Engineering:</strong> Identifying highly skewed features during EDA and applying log transformations (`np.log1p`) to satisfy normalcy assumptions in linear models.</li>
+        </ul>
+    </div>
+
+    <div class="topic-container">
+        <h2 class="topic-title">Power Law & Pareto Distributions</h2>
+        <h3>Intuition & Story</h3>
+        <p>Consider word popularity in English books: a few common words like "the" and "and" appear millions of times, while the vast majority of unique words appear only once or twice. This structural imbalance also forms the famous 80/20 Rule (e.g., 80% of library checkouts are driven by 20% of active members). This phenomenon is modeled by Power Law and Pareto distributions, tracking heavy-tailed behaviors where a tiny group dominates the metrics.</p>
+        <h3>Technical Definition</h3>
+        <p><strong>Power Law:</strong> A functional relationship where a relative change in one quantity results in a proportional relative change in another, independent of initial size.<br>
+        <strong>Pareto:</strong> A continuous formulation of the power law bounded by a strictly positive minimum threshold parameter (x<sub>m</sub>).</p>
+        <h3>Mathematical Formula (Pareto PDF)</h3>
+        <div class="formula-block">f(x) = (&alpha; · x<sub>m</sub><sup>&alpha;</sup>) / x<sup>&alpha;+1</sup>   [for x &ge; x<sub>m</sub>]</div>
+        <h3>Step-by-Step Solved Numerical</h3>
+        <div class="solved-example">
+            <p>Seasonal flood levels follow a Pareto distribution with x<sub>m</sub> = 2 meters and &alpha; = 3. Calculate the probability density value f(x) for a flood level reaching exactly x = 4 meters.</p>
+            <div class="step">f(4) = (3 · 2<sup>3</sup>) / 4<sup>3+1</sup> = (3 · 8) / 256 = 24 / 256 = 3 / 32 ≈ 0.0938</div>
+            <div class="interpretation">Interpretation: The probability density score for a flood level reaching exactly 4 meters under this risk profile is 0.0938.</div>
+        </div>
+        <h3>Use Cases in Data Science & ML</h3>
+        <ul>
+            <li><strong>Customer Segmentation:</strong> Isolating high-impact "whale" users from casual customers based on lifetime value metrics.</li>
+            <li><strong>Network Graph Analytics:</strong> Detecting central hubs or exceptionally connected nodes within web-link structures or social networks.</li>
+        </ul>
+    </div>
+
+    <div class="topic-container">
+        <h2 class="topic-title">Central Limit Theorem (CLT)</h2>
+        <h3>Intuition & Story</h3>
+        <p>Imagine visiting a stadium holding 100,000 people with a chaotic, non-normal age distribution (lots of kids, a few teenagers, lots of elderly). If you randomly pull out a sample cohort of 30 people, compute their average age, and write it down, and then repeat this process 10,000 times, those 10,000 *sample averages* will magically arrange themselves into a clean, symmetrical bell curve. The averages of samples become normal, even if the underlying population is completely chaotic.</p>
+        <h3>Technical Definition</h3>
+        <p>The Central Limit Theorem states that if you draw sufficiently large random samples (typically n &mu; &ge; 30) from any population with a finite mean and variance, the sampling distribution of the sample means will approximate a normal distribution regardless of the original population shape.</p>
+        <h3>Mathematical Formula</h3>
+        <div class="formula-block">Standard Error (&sigma;<sub>x</sub>) = &sigma; / &radic;n</div>
+        <h3>Step-by-Step Solved Numerical</h3>
+        <div class="solved-example">
+            <p>A non-normal population of light bulbs has a population mean lifespan of 800 hours and a standard deviation of 120 hours. A team draws samples of size n = 36. Find the standard error of the sampling distribution.</p>
+            <div class="step">Standard Error = &sigma; / &radic;n = 120 / &radic;36 = 120 / 6 = 20 hours.</div>
+            <div class="interpretation">Interpretation: The distribution of batch averages will center around 800 hours with a tightly bounded batch variation spread of 20 hours.</div>
+        </div>
+        <h3>Use Cases in Data Science & ML</h3>
+        <ul>
+            <li><strong>A/B Testing Sign-Off:</strong> Providing the mathematical safety net to run Z-tests and t-tests comparing user cohorts without knowing the population's exact distribution shape.</li>
+        </ul>
+    </div>
+
+    <div class="topic-container">
+        <h2 class="topic-title">Estimates (Point and Interval)</h2>
+        <h3>Intuition & Story</h3>
+        <p>If your manager asks for the average value of a home in the city, and you look at a sample of 50 houses and state a single exact number—"exactly $450,000"—you are providing a Point Estimate. It's a useful best guess, but lacks a measure of uncertainty. If you instead state, "I am 95% confident that the true population average lies between $430,000 and $470,000," you are providing an Interval Estimate (Confidence Interval), balancing precision with risk parameters.</p>
+        <h3>Technical Definition</h3>
+        <p><strong>Point Estimate:</strong> A single numeric value calculated from sample data serving as an approximation for an unknown population parameter.<br>
+        <strong>Interval Estimate:</strong> A range of values derived from sample statistics within which the true parameter is expected to fall with a specified level of confidence.</p>
+        <h3>Mathematical Formula</h3>
+        <div class="formula-block">Confidence Interval = x̄ &plusmn; Z<sub>&alpha;/2</sub> · (&sigma; / &radic;n)</div>
+        <h3>Step-by-Step Solved Numerical</h3>
+        <div class="solved-example">
+            <p>A sample of n = 64 users shows a mean daily reading time (x̄) of 40 minutes. The population standard deviation (&sigma;) is known to be 8 minutes. Construct a 95% confidence interval (Z<sub>&alpha;/2</sub> = 1.96).</p>
+            <div class="step">Standard Error = 8 / &radic;64 = 8 / 8 = 1.0 minute.</div>
+            <div class="step">Margin of Error = 1.96 · 1.0 = 1.96 minutes.</div>
+            <div class="step">Interval = 40 &plusmn; 1.96 &rArr; [38.04 minutes, 41.96 minutes]</div>
+            <div class="interpretation">Interpretation: We are 95% confident that the true population average reading time across all users lies between 38.04 and 41.96 minutes.</div>
+        </div>
+        <h3>Use Cases in Data Science & ML</h3>
+        <ul>
+            <li><strong>Experiment Performance Auditing:</strong> Presenting conversion rate lifts in A/B tests alongside confidence intervals to ensure product modifications are backed by reliable data margins rather than raw sampling noise.</li>
+        </ul>
+        <div class="interview-box">
+            <strong>Interview-Level Explanation</strong>
+            "Estimation bridges the gap between sample data and population truth. While a point estimate provides our best single guess for a parameter, it contains no inherent measure of uncertainty. An interval estimate explicitly integrates the sample size and data variance to establish a statistically backed range, allowing us to quantify our confidence and manage risk parameters safely during deployment transformations."
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
