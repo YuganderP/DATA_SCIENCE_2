@@ -83,6 +83,12 @@ def delete_venue(venue_id: int, db: Session = Depends(get_db)):
 
 @app.post("/users", response_model=UserResponse)
 def create_user(user: UserCreate, db: Session = Depends(get_db)):
+    venue_check = db.query(Venue).filter(Venue.id == user.venue_id).first()
+    if venue_check is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND, details="invald venue id "
+        )
+
     new_user = User(
         name=user.name, email=user.email, role=user.role, venue_id=user.venue_id
     )
@@ -113,10 +119,12 @@ def get_user(user_id: int, db: Session = Depends(get_db)):
 @app.put("/users/{user_id}", response_model=UserResponse)
 def update_user(user: UserCreate, user_id: int, db: Session = Depends(get_db)):
     result = db.query(User).filter(User.id == user_id).first()
-    if result is None:
+    venue_check = db.query(Venue).filter(Venue.id == user.venue_id).first()
+
+    if result is None or venue_check is None:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
-            detail={"Message": "no venue with given user id found "},
+            detail={"Message": "Please check the data again  "},
         )
     else:
         result.name = user.name
@@ -146,6 +154,13 @@ def delete_user(user_id: int, db: Session = Depends(get_db)):
 
 @app.post("/facilities", response_model=FacilityResponse)
 def create_facility(facility: FacilityCreate, db: Session = Depends(get_db)):
+    venue_check = db.query(Venue).filter(Venue.id == facility.venue_id).first()
+    if venue_check is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="venue id provided is not right ",
+        )
+
     new_facility = Facility(
         sport_type=facility.sport_type,
         description=facility.description,
@@ -181,10 +196,11 @@ def update_facility(
     facility: FacilityCreate, facility_id: int, db: Session = Depends(get_db)
 ):
     result = db.query(Facility).filter(Facility.id == facility_id).first()
-    if result is None:
+    venue_check = db.query(Venue).filter(Venue.id == facility.venue_id).first()
+    if result is None or venue_check is None:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
-            detail={"Message": "no facility with given facility id found"},
+            detail={"Message": "Please enter correct data "},
         )
     else:
         result.sport_type = facility.sport_type
@@ -211,6 +227,15 @@ def delete_facility(facility_id: int, db: Session = Depends(get_db)):
 
 @app.post("/bookings", response_model=BookingResponse)
 def create_booking(booking: BookingCreate, db: Session = Depends(get_db)):
+    facility_check = (
+        db.query(Facility).filter(Facility.id == booking.facility_id).first()
+    )
+    user_check = db.query(User).filter(User.id == booking.user_id).first()
+    if facility_check is None or user_check is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND, detail="invalid data provided "
+        )
+
     new_booking = Booking(
         user_id=booking.user_id,
         facility_id=booking.facility_id,
@@ -251,10 +276,15 @@ def update_booking(
     booking: BookingCreate, booking_id: int, db: Session = Depends(get_db)
 ):
     result = db.query(Booking).filter(Booking.id == booking_id).first()
-    if result is None:
+    user_check = db.query(User).filter(User.id == booking.user_id).first()
+    facility_check = (
+        db.query(Facility).filter(Facility.id == booking.facility_id).first()
+    )
+
+    if result is None or user_check is None or facility_check is None:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
-            detail={"Message": "no Booking with given booking id found"},
+            detail={"Message": "Please enter correct data"},
         )
     else:
         result.user_id = booking.user_id
