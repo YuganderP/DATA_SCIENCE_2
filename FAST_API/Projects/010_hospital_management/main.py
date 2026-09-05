@@ -11,12 +11,22 @@ from exceptions import (
     AppointmentNotFoundException,
 )
 
-app = FastAPI()
+from contextlib import asynccontextmanager
+
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    async with engine.begin() as conn:
+        await conn.run_sync(Base.metadata.create_all)
+
+    yield
+    await engine.dispose()
+
+
+app = FastAPI(lifespan=lifespan)
 app.include_router(patients.router)
 app.include_router(appointments.router)
 app.include_router(doctors.router)
-
-Base.metadata.create_all(engine)
 
 
 @app.exception_handler(PatientNotFoundException)

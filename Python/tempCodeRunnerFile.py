@@ -1,0 +1,1 @@
+asyncio.run(get_data())

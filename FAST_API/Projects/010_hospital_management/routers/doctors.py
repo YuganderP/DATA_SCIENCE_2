@@ -2,7 +2,7 @@ from fastapi import APIRouter, Depends
 from fastapi.responses import JSONResponse
 
 from sqlalchemy import select
-from sqlalchemy.orm import Session
+from sqlalchemy.ext.asyncio import AsyncSession
 
 from database import get_db
 from models import Doctor
@@ -14,7 +14,7 @@ router = APIRouter(prefix="/doctors", tags=["doctors"])
 
 
 @router.post("/", response_model=DoctorResponse)
-def create_doctor(doctor: DoctorCreate, db: Session = Depends(get_db)):
+async def create_doctor(doctor: DoctorCreate, db: AsyncSession = Depends(get_db)):
     new_doctor = Doctor(
         name=doctor.name,
         specialization=doctor.specialization,
@@ -23,23 +23,23 @@ def create_doctor(doctor: DoctorCreate, db: Session = Depends(get_db)):
     )
 
     db.add(new_doctor)
-    db.commit()
-    db.refresh(new_doctor)
+    await db.commit()
+    await db.refresh(new_doctor)
 
     return new_doctor
 
 
 @router.get("/", response_model=list[DoctorResponse])
-def get_doctors(db: Session = Depends(get_db)):
-    result = db.execute(select(Doctor))
+async def get_doctors(db: AsyncSession = Depends(get_db)):
+    result = await db.execute(select(Doctor))
     doctors = result.scalars().all()
 
     return doctors
 
 
 @router.get("/{doctor_id}", response_model=DoctorResponse)
-def get_doctor(doctor_id: int, db: Session = Depends(get_db)):
-    result = db.execute(select(Doctor).filter(Doctor.id == doctor_id))
+async def get_doctor(doctor_id: int, db: AsyncSession = Depends(get_db)):
+    result = await db.execute(select(Doctor).filter(Doctor.id == doctor_id))
 
     doctor = result.scalars().first()
 
@@ -50,10 +50,10 @@ def get_doctor(doctor_id: int, db: Session = Depends(get_db)):
 
 
 @router.put("/{doctor_id}", response_model=DoctorResponse)
-def update_doctor(
-    doctor_id: int, doctor_data: DoctorCreate, db: Session = Depends(get_db)
+async def update_doctor(
+    doctor_id: int, doctor_data: DoctorCreate, db: AsyncSession = Depends(get_db)
 ):
-    result = db.execute(select(Doctor).filter(Doctor.id == doctor_id))
+    result = await db.execute(select(Doctor).filter(Doctor.id == doctor_id))
 
     doctor = result.scalars().first()
 
@@ -65,23 +65,23 @@ def update_doctor(
     doctor.phone = doctor_data.phone
     doctor.email = doctor_data.email
 
-    db.commit()
-    db.refresh(doctor)
+    await db.commit()
+    await db.refresh(doctor)
 
     return doctor
 
 
 @router.delete("/{doctor_id}")
-def delete_doctor(doctor_id: int, db: Session = Depends(get_db)):
-    result = db.execute(select(Doctor).filter(Doctor.id == doctor_id))
+async def delete_doctor(doctor_id: int, db: AsyncSession = Depends(get_db)):
+    result = await db.execute(select(Doctor).filter(Doctor.id == doctor_id))
 
     doctor = result.scalars().first()
 
     if doctor is None:
         raise DoctorNotFoundException
 
-    db.delete(doctor)
-    db.commit()
+    await db.delete(doctor)
+    await db.commit()
 
     return JSONResponse(
         status_code=200, content={"detail": f"{doctor_id} doctor has been deleted"}
